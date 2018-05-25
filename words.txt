@@ -1,328 +1,280 @@
-﻿also (алсо)
-также
-Culture (калчэ)
-культура
-Idea (айдиа)
-идея
-belief (белиф)
-верование, убеждение
-society (сос*айэти)
-общество, социум
-mirror
-зеркало
-reflect
-отражать
-such as
-такой как
-unite (юнайт)
-объединять
-high (хай)
-высоко
-value
-стоимость, ценность, цена
-among
-между
-place (плейс)
-есто, ложить, ставить
-a lot of
-много
-important
-важный
-quality
-качество
-make
-делать
-show
-показывать (шоу)
-memory
-память
-instead
-напротив, ноборот
-find (файнд)
-находить
-answer (ансэр)
-ответ
-themself (#эмселф)
-сами, себя (они, мн.число)
-himself (химселф)
-сам, себя (он)
-herself
-сама, себя (она)
-myself
-сам, себя (я)
-ourself
-сами, себя (мы)
-yourself
-сам, себя (ты, вы)
-often (офн)
-часто
-discussion (дискашэн)
-дискуссия
-at
-около, недалеко, рядом
-early (эрли)
-рано
-age (эйдж)
-век, возраст
-learn (льэрн)
-учить, учиться
-opinion (опиньйон)
-мнение
-most (моуст)
-большинство
-have
-иметь
-same (сейм)
-такой же самый, одинаковый
-perhaps
-возможно
-for
-для
-reason
-причина (резон)
-orient
-восток (в значении "страны востока")
-goal
-цель (забить гол)
-together
-вместе
-rather than
-скорее чем, охотнее чем
-and
-и
-assignment
-поручение
-listen (лисн)
-слушать
-recite (ресайт)
-рассказывать напамять
-rule
-правило, управлять (руль)
-from
-из, от
-west
-запад
-east
-восток
-south
-юг
-north
-север
-country
-страна
-recently
-недавно
-elementary school (2)
-младшая школа (2)
-watch
-смотреть, наручные часы
-young (йон(г))
-молодой
-draw
-рисовать
-circle (сьоркл)
-круг
-small (смол)
-маленький
-triangle (трай*энгл)
-треугольник
-top
-вершина, верх
-way
-путь, дорога (образ вещей)
-lesson
-урок
-continue (континьюэ)
-продолжать
-until (антил)
-до тех пор
-each (ич)
-каждій
-exactly (игзэктли)
-абсолютно
-own (аун)
-собственны
-art
-искусство
-full
-полный
-unique (юник)
-уникальный
-completely (комплитли)
-полностью
-different
-отличный, различный
-other (а#э)
-другой
-cause (кос)
-причинять
-educational (эдьюкейшинал)
-образовательный
-language (ленгуидж)
-язык (мова)
-any
-любой
-more
-больше (море)
-or
-или
-I - me - my
-я - мне - моё
-He - him - his
-он - ему - его
-She - her - her
-она - ей - её
-It - it - its
-оно - ему - его
-they - them - their
-они - их - их (принадлежность)
-we - us - our
-мы - нас - наш
-you - you - your
-ты - тебя - твой (вы - вас - ваш)
-I -> be
-am
-he,she,it -> be
-is
-we,they,you -> be
-are
-прост. прошедшее от "be"
-was (единств.) were (множеств.)
-who
-кто
-what
-что
-where
-где
-when
-когда
-why
-почему
-whom
-кому
-whose
-чей
-that, which
-который
-these
-эти
-example
-пример
-advantage
-преимущество
-hour (аур)
-час
-disadvantage
-недостаток (dis+advantage)
-memorize
-запоминать, зазубривать
-after
-после
-exam (examination)
-экзамен
-forget
-забывать
-think
-думать
-creative
-творческий, креативный
-adult
-взрослый, зрелый
-benefit
-преимущество
-develop
-разрабатывать
-complicated
-сложный
-government (гавэмент)
-правительство
-authority
-власть
-responsible
-ответственный
-excercise (єксерсайз)
-упражнение
-advice (эдв*айс)
-совет
-local
-местный
-area
-область, площадь (в смысле геометрии)
-payment
-плата
-building
-здание, стройка
-equipment (эквипмент)
-оборудование
-timetable (таймтейбл)
-расписание
-usual
-обычный
-decide
-решать
-introduce
-ввести, представить
-great
-большой, великий, великолепный
-aim
-цель, задача, прицел
-free
-свободный
-skill
-умение
-pupil (пьюпил)
-ученик
-chief
-главный, шеф, вождь
-include
-включать (в себя)
-framework
-рамка (в рамках)
-knowledge (ноуледж)
-знание
-emphasize (эмфасайз)
-акцентировать, подчёркивать
-application (апликейшен)
-применение
-manage
-управление (от "менеджер")
-referr
-упоминать
-parents
-родители
-primary school (1)
-начальная школа (1)
-monday (мандэй)
-понедельник
-tuesday (тьйуздей)
-вторник
-wednesday (вэднесдей)
-среда
-thursday (%ьорсдей)
-четверг
-friday (фрайдэй)
-пятница
-saturday (сатурдей)
-суббота
-sunday (сандэей)
-воскресенье
-week
-неделя
-month
-месяц
-either (ай#эр)
-или (*или* одно или другое)
-nearly
-почти, близко
-nursery (ньорсери)
-ясли (от nurse - няня)
-attach
-прикреплять
-enough (энаф)
-достаточно
-morning
-утро
-evening
-вечер
-night
-ночь
+﻿Also
+Также
+Culture
+Культура
+Idea
+Идея
+Belief
+Верование, убеждение
+Society
+Общество, социум
+Mirror
+Зеркало
+Reflect
+Отражать
+Unite
+Объединять
+High
+Высоко
+Value
+Стоимость, ценность, цена
+Among
+Между
+Place
+Есто, ложить, ставить
+A lot of
+Много
+Important
+Важный
+Quality
+Качество
+Make
+Делать
+Show
+Показывать (шоу)
+Memory
+Память
+Instead
+Напротив, ноборот
+Find
+Находить
+Answer
+Ответ
+Often
+Часто
+Discussion
+Дискуссия
+Early
+Рано
+Age
+Век, возраст
+Learn
+Учить, учиться
+Opinion
+Мнение
+Most
+Большинство
+Have
+Иметь
+Same
+Такой же самый, одинаковый
+Perhaps
+Возможно
+For
+Для
+Reason
+Причина (резон)
+Goal
+Цель (забить гол)
+Together
+Вместе
+And
+И
+Assignment
+Поручение
+Listen
+Слушать
+Recite
+Рассказывать напамять
+Rule
+Правило, управлять (руль)
+From
+Из, от
+West
+Запад
+East
+Восток
+South
+Юг
+North
+Север
+Country
+Страна
+Recently
+Недавно
+Watch
+Смотреть, наручные часы
+Young
+Молодой
+Draw
+Рисовать
+Circle
+Круг
+Small
+Маленький
+Triangle
+Треугольник
+Top
+Вершина, верх
+Way
+Путь, дорога (во всех понятиях)
+Lesson
+Урок
+Continue
+Продолжать
+Until
+До тех пор
+Each
+Каждый
+Exactly
+Абсолютно
+Own
+Собственный
+Art
+Искусство
+Full
+Полный
+Unique
+Уникальный
+Completely
+Полностью
+Different
+Отличный, различный
+Other
+Другой
+Cause
+Причинять
+Educational
+Образовательный
+Language
+Язык (на котором говорят)
+Tongue
+Язык (как часть тела)
+Any
+Любой
+More
+Больше (море)
+Or
+Или
+Who
+Кто
+What
+Что
+Where
+Где
+When
+Когда
+Why
+Почему
+Whom
+Кому
+Whose
+Чей
+That, which
+Который
+These
+Эти
+Example
+Пример
+Advantage
+Преимущество
+Hour
+Час
+Disadvantage
+Недостаток
+Memorize
+Запоминать, зазубривать
+After
+После
+Exam (examination)
+Экзамен
+Forget
+Забывать
+Think
+Думать
+Creative
+Творческий, креативный
+Adult
+Взрослый, зрелый
+Benefit
+Преимущество
+Develop
+Разрабатывать
+Complicated
+Сложный
+Government
+Правительство
+Authority
+Власть
+Responsible
+Ответственный
+Excercise
+Упражнение
+Advice
+Совет
+Local
+Местный
+Area
+Область, площадь (в смысле геометрии)
+Payment
+Плата
+Building
+Здание, стройка
+Equipment
+Оборудование
+Timetable
+Расписание
+Usual
+Обычный
+Decide
+Решать
+Introduce
+Ввести, представить
+Great
+Большой, великий, великолепный
+Aim
+Цель, задача, прицел
+Free
+Свободный
+Skill
+Умение
+Pupil
+Ученик
+Chief
+Главный, шеф, вождь, председатель
+Include
+Включать
+Knowledge
+Знание
+Emphasize
+Акцентировать, подчёркивать
+Application
+Применение
+Manage
+Управление (от "менеджер")
+Referr
+Упоминать
+Parents
+Родители
+Monday
+Понедельник
+Tuesday
+Вторник
+Wednesday
+Среда
+Thursday
+Четверг
+Friday
+Пятница
+Saturday
+Суббота
+Sunday
+Воскресенье
+Week
+Неделя
+Month
+Месяц
+Nearly
+Почти, близко
+Nursery
+Ясли
+Attach
+Прикреплять
+Enough
+Достаточно
+Morning
+Утро
+Evening
+Вечер
+Night
+Ночь
