@@ -5,7 +5,7 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, MMSystem;
+  Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls;
 
 const maxwordlistcount=30;
 
