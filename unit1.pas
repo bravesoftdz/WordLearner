@@ -61,12 +61,8 @@ var
   i: integer;
 begin
   Randomize;
-  AssignFile(File1, 'Words.txt');
-  {$i-}
+  AssignFile(File1, 'words.txt');
   Reset(File1);
-  if IOResult <> 0 then
-    Rewrite(File2);
-  {$i+}
   nWords := 0;
   repeat
     Inc(nWords);
@@ -77,7 +73,7 @@ begin
 
   Form1.Label4.Caption := 'Number of Words = ' + IntToStr(nWords);
 
-  AssignFile(File2, 'Words.sco');
+  AssignFile(File2, 'words.sco');
   {$i-}
   Reset(File2);
   if IOResult > 0 then
@@ -95,7 +91,7 @@ procedure SaveData;
 var
   i: integer;
 begin
-  AssignFile(File2, 'Words.sco');
+  AssignFile(File2, 'words.sco');
   Rewrite(File2);
   for i := 1 to nWords do
     Write(File2, Words[i].Score);
@@ -143,7 +139,7 @@ begin
   Form1.ListBox2.Clear;
   for j := 1 to WordListCount do
   begin
-    Form1.ListBox1.Items.Add(Words[Wordlist1[j]].Word1{ +'  ('+IntToStr(Words[Wordlist1[j]].Score-1)+')'});
+    Form1.ListBox1.Items.Add(Words[Wordlist1[j]].Word1);
     Form1.ListBox2.Items.Add(Words[Wordlist2[j]].Word2);
   end;
 
