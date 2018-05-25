@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls;
 
 const
-  maxwordlistcount = 30;
+  MaxWordListCount = 30;
 
 type
 
@@ -35,120 +35,120 @@ type
   end;
 
 type
-  word_type = record
-    word1, word2: string;
-    score: byte;
+  Word_type = record
+    Word1, Word2: string;
+    Score: byte;
   end;
 
 var
   Form1: TForm1;
-  words: array[1..10000] of word_type;
-  nwords: integer;
+  Words: array[1..10000] of Word_type;
+  nWords: integer;
 
-  wordlist1, wordlist2: array[1..maxwordlistcount] of integer;
+  Wordlist1, Wordlist2: array[1..MaxWordListCount] of integer;
 
-  wordlistcount: byte;
+  WordListCount: byte;
 
-  word1, word2: byte;
+  Word1, Word2: byte;
 
-  file1: Text;
-  file2: file of byte;
+  File1: Text;
+  File2: file of byte;
 
 implementation
 
-procedure loaddata;
+procedure LoadData;
 var
   i: integer;
 begin
-  randomize;
-  AssignFile(file1, 'words.txt');
+  Randomize;
+  AssignFile(File1, 'Words.txt');
   {$i-}
-  reset(file1);
-  if ioresult <> 0 then
-    rewrite(file2);
+  Reset(File1);
+  if IOResult <> 0 then
+    Rewrite(File2);
   {$i+}
-  nwords := 0;
+  nWords := 0;
   repeat
-    Inc(nwords);
-    readln(file1, words[nwords].word1);
-    readln(file1, words[nwords].word2);
-  until EOF(file1);
-  closefile(file1);
+    Inc(nWords);
+    ReadLn(File1, Words[nWords].Word1);
+    ReadLn(File1, Words[nWords].Word2);
+  until EOF(File1);
+  CloseFile(File1);
 
-  form1.label4.Caption := 'Number of words = ' + IntToStr(nwords);
+  Form1.Label4.Caption := 'Number of Words = ' + IntToStr(nWords);
 
-  AssignFile(file2, 'words.sco');
+  AssignFile(File2, 'Words.sco');
   {$i-}
-  reset(file2);
-  if IOresult > 0 then
-    rewrite(file2);
+  Reset(File2);
+  if IOResult > 0 then
+    Rewrite(File2);
   {$i+}
-  for i := 1 to nwords do
-    if (not EOF(file2)) then
-      Read(file2, words[i].score)
+  for i := 1 to nWords do
+    if (not EOF(File2)) then
+      Read(File2, Words[i].Score)
     else
-      words[i].score := 1;
-  closefile(file2);
+      Words[i].Score := 1;
+  CloseFile(File2);
 end;
 
-procedure savedata;
+procedure SaveData;
 var
   i: integer;
 begin
-  AssignFile(file2, 'words.sco');
-  rewrite(file2);
-  for i := 1 to nwords do
-    Write(file2, words[i].score);
-  closefile(file2);
+  AssignFile(File2, 'Words.sco');
+  Rewrite(File2);
+  for i := 1 to nWords do
+    Write(File2, Words[i].Score);
+  CloseFile(File2);
 end;
 
 
-procedure generatelist;
+procedure GenerateList;
 var
   i, j, k: integer;
-  wordfound: boolean;
+  WordFound: boolean;
 begin
-  wordlistcount := form1.ScrollBar1.position;
+  WordListCount := Form1.ScrollBar1.Position;
 
-  for j := 1 to wordlistcount do
+  for j := 1 to WordListCount do
     repeat
-      wordfound := False;
-      i := trunc(random * (nwords)) + 1;
-      if random < (1 / words[i].score) then
+      WordFound := false;
+      i := Trunc(Random * (nWords)) + 1;
+      if Random < (1 / Words[i].Score) then
       begin
-        wordlist1[j] := i;
-        wordfound := True;
+        Wordlist1[j] := i;
+        WordFound := true;
       end;
       if j > 1 then
         for k := 1 to j - 1 do
-          if i = wordlist1[k] then
-            wordfound := False;
-      if (words[i].score = 1) and (random > 0.01) then
-        wordfound := False;
-    until wordfound;
+          if i = Wordlist1[k] then
+            WordFound := false;
+      if (Words[i].Score = 1) and (Random > 0.01) then
+        WordFound := false;
+    until WordFound;
 
-  for j := 1 to wordlistcount do
+  for j := 1 to WordListCount do
     repeat
-      wordfound := True;
-      i := wordlist1[trunc(random * (wordlistcount)) + 1];
+      WordFound := true;
+      i := Wordlist1[Trunc(Random * (WordListCount)) + 1];
       if j > 1 then
         for k := 1 to j - 1 do
-          if i = wordlist2[k] then
-            wordfound := False;
-      if wordfound then
-        wordlist2[j] := i;
-    until wordfound;
+          if i = Wordlist2[k] then
+            WordFound := false;
+      if WordFound then
+        Wordlist2[j] := i;
+    until WordFound;
 
-  form1.listbox1.Clear;
-  form1.listbox2.Clear;
-  for j := 1 to wordlistcount do
+  Form1.ListBox1.Clear;
+  Form1.ListBox2.Clear;
+  for j := 1 to WordListCount do
   begin
-    form1.listbox1.items.Add(words[wordlist1[j]].word1{ +'  ('+inttostr(words[wordlist1[j]].score-1)+')'});
-    form1.listbox2.items.Add(words[wordlist2[j]].word2);
+    Form1.ListBox1.Items.Add(Words[Wordlist1[j]].Word1{ +'  ('+IntToStr(Words[Wordlist1[j]].Score-1)+')'});
+    Form1.ListBox2.Items.Add(Words[Wordlist2[j]].Word2);
   end;
 
-  form1.listbox1.Enabled := True;
-  form1.listbox2.Enabled := False;
+  Form1.ListBox1.Enabled := true;
+  Form1.ListBox2.Enabled := false;
 
 end;
 
@@ -157,75 +157,74 @@ end;
 
 procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  savedata;
+  SaveData;
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  generatelist;
+  GenerateList;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  loaddata;
-  generatelist;
+  LoadData;
+  GenerateList;
 end;
 
 procedure TForm1.ListBox1SelectionChange(Sender: TObject; User: boolean);
 var
   j: byte;
 begin
-  listbox1.Enabled := False;
-  listbox2.Enabled := True;
-  for j := 1 to listbox1.items.Count do
-    if listbox1.Selected[j - 1] then
-      word1 := j;
-  label2.Caption := IntToStr(words[wordlist1[word1]].score - 1);
-  label1.Visible := True;
-  label2.Visible := True;
+  ListBox1.Enabled := false;
+  ListBox2.Enabled := true;
+  for j := 1 to ListBox1.Items.Count do
+    if ListBox1.Selected[j - 1] then
+      Word1 := j;
+  Label2.Caption := IntToStr(Words[Wordlist1[Word1]].Score - 1);
+  Label1.Visible := true;
+  Label2.Visible := true;
 end;
 
 procedure TForm1.ListBox2SelectionChange(Sender: TObject; User: boolean);
 var
   j: byte;
 begin
-  for j := 1 to listbox2.items.Count do
-    if listbox2.Selected[j - 1] then
-      word2 := j;
-  if wordlist1[word1] = wordlist2[word2] then
+  for j := 1 to ListBox2.Items.Count do
+    if ListBox2.Selected[j - 1] then
+      Word2 := j;
+  if Wordlist1[Word1] = Wordlist2[Word2] then
   begin
-    Inc(words[wordlist1[word1]].score);
-    if words[wordlist1[word1]].score > 200 then
-      words[wordlist1[word1]].score := 200;
-    if word1 < listbox1.items.Count then
-      for j := word1 to listbox1.items.Count - 1 do
-        wordlist1[j] := wordlist1[j + 1];
-    if word2 < listbox2.items.Count then
-      for j := word2 to listbox2.items.Count - 1 do
-        wordlist2[j] := wordlist2[j + 1];
-    listbox1.Items.Delete(word1 - 1);
-    listbox2.Items.Delete(word2 - 1);
-  end
-  else
+    Inc(Words[Wordlist1[Word1]].Score);
+    if Words[Wordlist1[Word1]].Score > 200 then
+      Words[Wordlist1[Word1]].Score := 200;
+    if Word1 < ListBox1.Items.Count then
+      for j := Word1 to ListBox1.Items.Count - 1 do
+        Wordlist1[j] := Wordlist1[j + 1];
+    if Word2 < ListBox2.Items.Count then
+      for j := Word2 to ListBox2.Items.Count - 1 do
+        Wordlist2[j] := Wordlist2[j + 1];
+    ListBox1.Items.Delete(Word1 - 1);
+    ListBox2.Items.Delete(Word2 - 1);
+  end else
   begin
-    words[wordlist1[word1]].score := words[wordlist1[word1]].score div 2;
-    if words[wordlist1[word1]].score = 0 then
-      words[wordlist1[word1]].score := 1;
-    words[wordlist2[word2]].score := words[wordlist2[word2]].score div 2;
-    if words[wordlist2[word2]].score = 0 then
-      words[wordlist2[word2]].score := 1;
-    listbox1.Selected[word1 - 1] := False;
-    listbox2.Selected[word2 - 1] := False;
+    Words[Wordlist1[Word1]].Score := Words[Wordlist1[Word1]].Score div 2;
+    if Words[Wordlist1[Word1]].Score = 0 then
+      Words[Wordlist1[Word1]].Score := 1;
+    Words[Wordlist2[Word2]].Score := Words[Wordlist2[Word2]].Score div 2;
+    if Words[Wordlist2[Word2]].Score = 0 then
+      Words[Wordlist2[Word2]].Score := 1;
+    ListBox1.Selected[Word1 - 1] := false;
+    ListBox2.Selected[Word2 - 1] := false;
   end;
-  if listbox1.items.Count = 0 then
+  if ListBox1.Items.Count = 0 then
   begin
-    savedata;
-    generatelist;
+    SaveData;
+    GenerateList;
   end;
-  listbox1.Enabled := True;
-  listbox2.Enabled := False;
-  label1.Visible := False;
-  label2.Visible := False;
+  ListBox1.Enabled := true;
+  ListBox2.Enabled := false;
+  Label1.Visible := false;
+  Label2.Visible := false;
 end;
 
 
